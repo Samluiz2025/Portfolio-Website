@@ -34,16 +34,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // === PROJECT CARD HOVER EFFECT ===
 const cards = document.querySelectorAll(".project-card");
 
-cards.forEach(card => {
-  card.addEventListener("mouseover", () => {
-    card.style.transform = "scale(1.03)";
-    card.style.transition = "0.3s ease";
-  });
+// === PROJECT CARD HOVER EFFECT (Only for desktop) ===
+const cards = document.querySelectorAll(".project-card");
 
-  card.addEventListener("mouseout", () => {
-    card.style.transform = "scale(1)";
+if (window.innerWidth > 768) {
+  cards.forEach(card => {
+    card.addEventListener("mouseover", () => {
+      card.style.transform = "scale(1.03)";
+      card.style.transition = "0.3s ease";
+    });
+
+    card.addEventListener("mouseout", () => {
+      card.style.transform = "scale(1)";
+    });
   });
-});
+}
 
 // === CONDITIONAL AUTO SCROLL CAROUSEL ===
 const carousel = document.querySelector('.projects-carousel');
