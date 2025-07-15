@@ -167,8 +167,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const funFacts = [
     "Hi there! Did you know this site runs on midnight creativity? 🌙",
     "This portfolio is powered by coffee and Ctrl+Z ☕⌨️",
-    "Udoba once styled an entire site without using 'px' — just vibes and rems 💅",
-    "Every section on this site has been hand-tuned like a guitar 🎸",
+    "Udoba once styled an entire site without using 'px' — just vibes and rems ",
+    "Every section on this site has been hand-tuned like a guitar ",
     "JavaScript wrote this popup. Udoba taught it how to party 🎉",
     "Tip: Hit 'Contact' and tell Udoba you made it this far 🚀",
     "The CSS is smoother than jazz on a rainy night 🎷"
