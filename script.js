@@ -388,3 +388,13 @@ function revealFooter() {
 
 window.addEventListener("scroll", revealFooter);
 window.addEventListener("DOMContentLoaded", revealFooter);
+
+// === HAMBURGER MENU TOGGLE ===
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("navMenu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+  });
+});
