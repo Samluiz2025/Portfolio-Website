@@ -68,7 +68,7 @@ section {
 .banner-section {
   position: relative;
   height: 100vh;
-  background: url('banner11.jpg') center/cover no-repeat; /* ✅ Pure image background */
+  background: url('Banner11.jpg') center/cover no-repeat; /* ✅ Pure image background */
   display: flex;
   flex-direction: column;
   align-items: center;
