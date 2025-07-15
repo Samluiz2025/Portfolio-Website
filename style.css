@@ -1,0 +1,817 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: #000;
+  line-height: 1.6;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+/* === NAVIGATION === */
+.top-nav {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 0.8rem 2rem;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: transparent;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a.active {
+  background-color: #274c77;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(30, 144, 255, 0.3);
+}
+
+.menu li a {
+  color: #000;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.menu li a:hover {
+  color: #FFCC00;
+  text-decoration: underline;
+}
+
+/* === BANNER SECTION === */
+.banner-section {
+  position: relative;
+  height: 100vh;
+  background: url('banner11.jpg') center/cover no-repeat; /* ✅ Pure image background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  color: #000;
+  overflow: hidden;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2.5px);
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
+
+.banner-section h1,
+.banner-section h2,
+.banner-section p,
+.banner-btn {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-section h1 .hello {
+  color: #274c77;
+}
+
+.banner-section h1 .world {
+  color: white;
+}
+
+.banner-section h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.banner-section p {
+  font-size: 1.1rem;
+  color: #000;
+  max-width: 600px;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.banner-section h1,
+.banner-section h2,
+.banner-section p,
+.banner-btn {
+  animation: popIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.banner-section h1 { animation-delay: 0.2s; }
+.banner-section h2 { animation-delay: 0.4s; }
+.banner-section p  { animation-delay: 0.6s; }
+.banner-btn        { animation-delay: 0.8s; }
+
+/* === BUTTON === */
+.banner-btn {
+  background-color: #274c77;
+  color: white;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.banner-btn:hover {
+  background-color: #0f70d3;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* === PROJECTS SECTION === */
+#projects {
+  padding: 4rem 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: #7a5048;
+  margin-bottom: 3rem;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 6rem;
+  padding: 2rem;
+  border-radius: 16px;
+  position: relative;
+}
+
+.project-row.has-background {
+  background-color: #f0f8ff;
+}
+
+.glow-zone {
+  transition: box-shadow 0.6s ease, background-color 0.6s ease;
+}
+
+/* 💡 When active and in view */
+.glow-zone.active-glow {
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.4);
+  background-color: #fef9e7;
+}
+
+
+/* === CARD IMAGE === */
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  z-index: 1;
+  opacity: 1;
+}
+
+/* === CARD OVERLAY === */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;  
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  animation: slideUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.project-card {
+  position: relative;
+  flex: 0 0 48%;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+
+  /* 💥 NEW: Pre-animation state */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ NEW: Reveal class added by JS */
+.project-card.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 6px 30px rgba(39, 76, 119, 0.2);
+  transition: all 0.6s ease-out;
+}
+
+.project-card.active-glow {
+  box-shadow: 0 0 18px rgba(255, 204, 0, 0.3);
+  transition: box-shadow 0.5s ease;
+}
+
+
+/* === GitHub Button === */
+.github-btn {
+  padding: 0.5rem 1rem;           /* Smaller spacing */
+  font-size: 0.85rem;             /* Reduced text size */
+  background-color: #274c77;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;             /* Slightly smaller curves */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;           /* Optional spacing from bottom */
+}
+
+
+.github-btn:hover {
+  background-color: #e6b800;
+}
+
+/* === DESCRIPTION SECTION === */
+.project-description {
+  flex: 0 0 48%;
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #303840;
+}
+
+.project-description h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #274c77;
+}
+
+.project-description h4 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.project-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+/* === SKILLS SECTION === */
+#skills {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #E6E7EC 0%, #DCE3ED 100%);
+  text-align: center;
+  border-radius: 16px;
+  transition: background 1s ease;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #7a5048;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* === Flip Card Structure === */
+.skill-card {
+  width: 150px;
+  height: 220px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.skill-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Card Front (Visual Style Preserved) === */
+.card-front {
+  background-color: white;
+  color: #000;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 2px solid #274c77;
+}
+
+/* === Card Back (Flip Style) === */
+.card-back {
+  background-color: #274c77;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* Skill Icon */
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1e90ff;
+}
+
+/* Skill Title */
+.skill-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background-color: #e0e0e0;
+  border: 2px solid #000f;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 16px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.progress {
+  height: 100%;
+  background-color: #FFCC00 !important;
+  border-radius: 20px 0 0 20px;
+  transition: width 0.5s ease;
+  width: 0%;
+}
+
+/* Progress Percent */
+.progress-percent {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Star Rating */
+.stars {
+  font-size: 1.2rem;
+  color: #FFCC00;
+}
+
+
+/* === ABOUT SECTION === */
+#about {
+  padding: 8rem 6rem;
+  background-color: white;
+  color: #000;
+  text-align: justify;
+  font-size: 1.05rem;
+  position: relative;
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #274c77;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+#about h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #FFCC00;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+#about p {
+  margin-bottom: 1.2rem;
+}
+
+#about strong {
+  color: #000;
+  font-weight: 600;
+}
+
+#about em {
+  font-style: italic;
+  color: #1e90ff;
+}
+
+/* === Portrait Styling === */
+.portrait-right {
+  float: right;
+  width: 280px;
+  height: 300px;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.4s ease;
+}
+
+.portrait-right.glow-image:hover {
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.5);
+}
+
+/* === Fade-in Paragraph Animation === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === CONTACT SECTION === */
+#contact {
+  padding: 4rem 2rem;
+  background-color: #DADBE1;
+  color: #000;
+  text-align: center;
+  border-top: 4px solid #FFCC00;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: #274c77;
+  margin-bottom: 1.5rem;
+}
+
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form p {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #274c77;
+}
+
+.contact-form button {
+  background-color: #274c77;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #FFCC00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.success-message {
+  margin-top: 1rem;
+  color: green;
+  font-weight: bold;
+  display: none;
+}
+
+.error-message {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+
+/* 💬 Chat Bubble Button */
+.chat-bubble {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #274c77;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.chat-bubble:hover {
+  background-color: #FFCC00;
+  color: #1a1a1a;
+}
+
+/* 💬 Chat Popup Box */
+.chat-popup {
+  position: fixed;
+  bottom: 7rem;
+  right: 2rem;
+  background-color: #fff;
+  border: 2px solid #274c77;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  display: none;
+  z-index: 99;
+}
+
+.chat-popup p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #274c77;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.chat-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #888;
+}
+
+
+.footer {
+  background-color: white;                  /* White top section */
+  color: #000;
+  padding: 4rem 2rem 0;
+  font-size: 0.95rem;
+  border-top: 5px solid #FFCC00;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.footer.footer-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.samluiz-text {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFCC00;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.brand-text {
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  font-size: larger;
+}
+
+.footer-social a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Official brand colors */
+.footer-social a.tiktok {
+  color: #69C9D0;
+}
+
+.footer-social a.github {
+  color: #181717;
+}
+
+.footer-social a.instagram {
+  color: #E4405F;
+}
+
+.footer-social a.whatsapp {
+  color: #25D366;
+}
+
+/* Hover effect: golden for all icons */
+.footer-social a:hover {
+  color: #FFCC00;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2.5rem;
+  flex: 1 1 300px;
+  justify-content: space-around;
+}
+
+.nav-column {
+  flex: 1;
+}
+
+.nav-column h3 {
+  font-size: x-large;
+  margin-bottom: 0.6rem;
+  color: #274c77;
+  text-decoration: underline;
+}
+
+.nav-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.nav-column ul li a {
+  color: #000;
+  font-size: larger;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-column ul li a:hover {
+  color: #FFCC00;
+}
+
+.nav-column p a {
+  color: #444;
+  text-decoration: none;
+}
+
+.nav-column p a:hover {
+  color: #FFCC00;
+}
+
+.footer-bottom {
+  background-color: #274c77;
+  color: white;
+  text-align: center;
+  padding: 0.2rem;
+  margin-top: 3rem;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.scroll-to-top {
+  position: absolute;
+  right: 1rem;
+  top: 1.2rem;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.scroll-to-top:hover {
+  color: #FFCC00;
+}
+

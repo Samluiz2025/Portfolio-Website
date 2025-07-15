@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samuel's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+<header>
+ <nav class="top-nav">
+  <ul class="menu">
+    <li><a href="#banner">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+  <section id="banner" class="section banner-section">
+    <div class="banner-overlay"></div>
+    <h1><span class="hello">Hello</span> <span class="world">World</span></h1>
+    <h2>Build Smarter, Automate Faster.</h2>
+    <p>
+      Transform your workflow with intelligent automation and clean code solutions.
+      From scripts to systems – we make it seamless, scalable, and future-ready.
+    </p>
+    <a href="#contact">
+  <button class="banner-btn">Get started</button>
+</a>
+  </section>
+</header>
+
+<section id="projects" class="glow-zone">
+  <h2>Projects</h2>
+
+  <!-- Project 1: Scientific Calculator -->
+<div class="project-row">
+  <div class="project-card reveal">
+    <img src="Calculator.png" alt="Scientific Calculator Screenshot" class="card-image">
+    <div class="card-overlay">
+      <a href="https://github.com/YOUR_USERNAME/Scientific-Calculator" target="_blank" class="github-btn">View on GitHub</a>
+    </div>
+  </div>
+  <div class="project-description">
+    <h3>Scientific Calculator</h3>
+    <h4>Fast, Functional, and Beautiful</h4>
+    <p>
+      A sleek calculator that combines elegance with power. Supports advanced math functions like trigonometry, logarithms, exponents, and real-time expression parsing. Includes history logging, dark mode toggle, and keyboard input — all packed in a stylish UI.
+    </p>
+  </div>
+</div>
+
+
+  <!-- Project 2 (background enabled) -->
+  <div class="project-row has-background">
+    <div class="project-description reveal">
+      <h3>Portfolio Website</h3>
+      <h4>Your Personal Brand</h4>
+      <p>
+        Make the right impression. A carefully crafted portfolio website
+        that highlights your skills, projects, and personality. Fully
+        responsive, beautifully laid out, and designed to leave a lasting
+        impact on visitors and recruiters alike.
+      </p>
+    </div>
+    <div class="project-card">
+      <img src="Portfolio.png" alt="Portfolio Screenshot" class="card-image">
+      <div class="card-overlay">
+        <a href="#" class="github-btn">View on GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="project-row">
+    <div class="project-card reveal">
+      <img src="Task-Manager.jpg" alt="Task Manager Screenshot" class="card-image">
+      <div class="card-overlay">
+        <a href="#" class="github-btn">View on GitHub</a>
+      </div>
+    </div>
+    <div class="project-description">
+      <h3>Task Manager</h3>
+      <h4>Master Your Day</h4>
+      <p>
+        Stay in control with a minimalist task manager designed for
+        clarity. Whether it’s work deadlines or personal goals, this tool
+        helps you prioritize, organize, and tick things off efficiently —
+        all from a distraction-free interface.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="devicon-python-plain colored skill-icon"></i>
+          <div class="skill-title">Python</div>
+          <div class="progress-bar">
+            <div class="progress" data-width="70%"></div>
+          </div>
+          <div class="progress-percent">70%</div>
+          <div class="stars">★★★☆☆</div>
+        </div>
+        <div class="card-back">
+          <p>Great for scripting and data workflows ⚙️</p>
+          <p>Used in AI, finance and web tools 🧠</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="devicon-javascript-plain colored skill-icon"></i>
+          <div class="skill-title">JavaScript</div>
+          <div class="progress-bar">
+            <div class="progress" data-width="60%"></div>
+          </div>
+          <div class="progress-percent">60%</div>
+          <div class="stars">★★★☆☆</div>
+        </div>
+        <div class="card-back">
+          <p>Makes the web interactive 💥</p>
+          <p>DOM, events, and logic are 🔑</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="devicon-css3-plain colored skill-icon"></i>
+          <div class="skill-title">CSS</div>
+          <div class="progress-bar">
+            <div class="progress" data-width="100%"></div>
+          </div>
+          <div class="progress-percent">100%</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="card-back">
+          <p>Styled for smooth animations 🎨</p>
+          <p>Master of Flex/Grid & responsive layout 📱</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="devicon-html5-plain colored skill-icon"></i>
+          <div class="skill-title">HTML</div>
+          <div class="progress-bar">
+            <div class="progress" data-width="100%"></div>
+          </div>
+          <div class="progress-percent">100%</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="card-back">
+          <p>Foundation of every site 🧱</p>
+          <p>Clean semantic structure & SEO 🍃</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="devicon-wordpress-plain colored skill-icon"></i>
+          <div class="skill-title">WordPress</div>
+          <div class="progress-bar">
+            <div class="progress" data-width="100%"></div>
+          </div>
+          <div class="progress-percent">100%</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="card-back">
+          <p>Fast site deployment ⚡</p>
+          <p>Blog, store or showcase setup 🛠️</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <i class="devicon-gear skill-icon"></i>
+          <div class="skill-title">EPLAN & Altium Designer</div>
+          <div class="progress-bar">
+            <div class="progress" data-width="70%"></div>
+          </div>
+          <div class="progress-percent">70%</div>
+          <div class="stars">★★★★☆</div>
+        </div>
+        <div class="card-back">
+          <p>Electrical design pro 🧭</p>
+          <p>Schematic layout & PCB mastery 💡</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="skill-title">Adobe Premiere Pro</div>
+          <div class="progress-bar">
+            <div class="progress" data-width="75%"></div>
+          </div>
+          <div class="progress-percent">75%</div>
+          <div class="stars">★★★☆☆</div>
+        </div>
+        <div class="card-back">
+          <p>Video editing with edge 🎬</p>
+          <p>Used for portfolios, promo reels & docs 🧰</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+ <section id="about">
+  <h2>About Me</h2>
+  <img src="Potrait1.jpg" alt="Portrait of Samuel" class="portrait-right glow-image">
+
+  <p class="fade-in">
+    Hi, I'm <strong>Samuel Chinedu Udoba</strong>, born on <strong>June 16th, 2003</strong>, and currently pursuing a
+    <strong>Bachelor's in Smart Automation</strong> at <strong>FH Campus 02, Graz</strong>. My journey has been anything but ordinary — and I'm proud of how far it's brought me.
+  </p>
+  <p class="fade-in">
+    I began my academic life at <strong>Spring Nursery and Primary School</strong> (2005–2013), then moved on to
+    <strong>All Hallows Seminary, Onitsha</strong> where I studied from 2013 to 2019. After that, I continued at
+    <strong>Bigard Memorial Seminary, Enugu</strong> from 2021 to 2023. These years shaped not just my education but also my discipline, values, and drive to keep growing.
+  </p>
+  <p class="fade-in">
+    In 2023, I made a bold and life-changing decision — to pivot into technology and pursue my deep interest in automation,
+    systems, and intelligent machines. That led me here, to Austria, where I’m fully immersed in the world of
+    <strong>Smart Automation</strong> — and I’ve never looked back.
+  </p>
+  <p class="fade-in">
+    What makes my path unique is that <strong>I taught myself programming from scratch</strong>. With no formal background,
+    I dived into tutorials, projects, and hands-on learning, gradually mastering <strong>Python</strong>,
+    <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>HTML</strong>. For me, programming isn’t just about writing
+    code — it’s about <em>solving real problems</em>, automating ideas, and creating things that work.
+  </p>
+  <p class="fade-in">
+    Outside the screen, I’m a huge fan of <strong>football</strong> and <strong>basketball</strong> — sports that keep me active,
+    focused, and balanced. They’ve taught me discipline, adaptability, and the importance of consistency — lessons I apply daily
+    in my tech journey.
+  </p>
+  <p class="fade-in">
+    I’m constantly learning, building, and evolving — and I hope this portfolio reflects not just my technical abilities but the
+    <strong>passion, persistence, and personality</strong> behind every project I take on.
+  </p>
+</section>
+
+
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-container">
+    <form action="https://formspree.io/f/meokyrow" method="POST" class="contact-form" id="contactForm">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+      <p>I'd love to hear from you. Send me a message below:</p>
+
+      <input type="text" name="name" id="name" placeholder="Your Name" required>
+      <span class="error-message" id="nameError">Please enter your name.</span>
+
+      <input type="email" name="email" id="email" placeholder="Your Email" required>
+      <span class="error-message" id="emailError">Please enter a valid email.</span>
+
+      <textarea name="message" id="message" rows="5" placeholder="Your Message..." required></textarea>
+      <span class="error-message" id="messageError">Message cannot be empty.</span>
+
+      <button type="submit" id="submitBtn">Send Message</button>
+      <div class="success-message" id="successMessage">✅ Message sent successfully!</div>
+    </form>
+  </div>
+</section>
+
+
+<!-- 💬 Floating Chat Bubble -->
+<div class="chat-bubble" id="chatBubble">
+  💬
+</div>
+
+<!-- 💬 Chat Popup Box -->
+<div class="chat-popup" id="chatPopup">
+  <p id="chatText">Hi there! Did you know this site runs on midnight creativity? 🌙</p>
+  <span class="chat-close" id="chatClose">&times;</span>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+  <div class="footer-brand">
+  <div class="samluiz-text">SAM-LUIZ</div>
+
+  <p class="brand-text">
+    This is a creative developer portfolio crafted with precision and passion. Built to showcase smart automation, code projects, and collaborative growth.
+  </p>
+      <div class="footer-social">
+  <a href="https://wa.me/+2349125009819" target="_blank" class="whatsapp" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://instagram.com/sam.luiz4" target="_blank" class="instagram" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href=https://tiktok.com/@samluiz12
+ target="_blank" class="tiktok" aria-label="TikTok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  <a href="https://github.com/Samluiz2025" target="_blank" class="github" aria-label="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+    </div>
+
+    <!-- Navigation Menus -->
+    <div class="footer-links">
+      <div class="nav-column">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Bottom Footer Bar -->
+  <div class="footer-bottom">
+    <p>&copy; Samluiz 2025</p>
+    <a href="#" class="scroll-to-top"><i class="fas fa-chevron-up"></i></a>
+  </div>
+</footer>
+
+</body>
+</html>
