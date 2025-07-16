@@ -663,12 +663,13 @@ input, textarea {
 }
 
 
+/* === 📦 Footer Container === */
 .footer {
-  background-color: white;                  /* White top section */
-  color: #000;
-  padding: 4rem 2rem 0;
+  background: linear-gradient(to right, #fdfdfd, #f5f7fa);
+  color: #333;
+  padding: 4rem 2rem 2rem;
   font-size: 0.95rem;
-  border-top: 5px solid #FFCC00;
+  border-top: 6px solid #FFCC00;
   position: relative;
   z-index: 1;
   opacity: 0;
@@ -679,147 +680,142 @@ input, textarea {
   opacity: 1;
   transform: translateY(0);
 }
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* === 👤 Brand Column === */
 .footer-brand {
   flex: 1 1 300px;
-  text-align: left;
 }
-
-.footer.footer-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .samluiz-text {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #FFCC00;
+  font-size: 1.8rem;
+  font-weight: 900;
   font-family: 'Poppins', sans-serif;
+  color: #FFCC00;
   letter-spacing: 2px;
   margin-bottom: 1rem;
 }
-
 .brand-text {
-  margin-bottom: 1.2rem;
-  font-size: 0.95rem;
+  margin-bottom: 1rem;
   line-height: 1.6;
+  color: #555;
 }
 
+/* === 🌐 Social Icons === */
 .footer-social {
   display: flex;
   gap: 1rem;
-  font-size: larger;
+  margin-top: 0.8rem;
 }
-
 .footer-social a {
+  font-size: 1.4rem;
+  color: #888;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
-/* Official brand colors */
-.footer-social a.tiktok {
-  color: #69C9D0;
-}
-
-.footer-social a.github {
-  color: #181717;
-}
-
-.footer-social a.instagram {
-  color: #E4405F;
-}
-
-.footer-social a.whatsapp {
-  color: #25D366;
-}
-
-/* Hover effect: golden for all icons */
 .footer-social a:hover {
   color: #FFCC00;
+  transform: scale(1.2);
 }
 
+/* Social Brand Colors */
+.footer-social a.whatsapp { color: #25D366; }
+.footer-social a.instagram { color: #E4405F; }
+.footer-social a.tiktok { color: #69C9D0; }
+.footer-social a.github { color: #181717; }
+
+/* === 📚 Navigation Links Column === */
 .footer-links {
-  display: flex;
-  gap: 2.5rem;
   flex: 1 1 300px;
+  display: flex;
   justify-content: space-around;
 }
-
-.nav-column {
-  flex: 1;
-}
-
 .nav-column h3 {
-  font-size: x-large;
-  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
   color: #274c77;
-  text-decoration: underline;
 }
-
 .nav-column ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
-
 .nav-column ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
-
 .nav-column ul li a {
-  color: #000;
-  font-size: larger;
+  color: #333;
+  font-size: 1rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 .nav-column ul li a:hover {
   color: #FFCC00;
 }
 
-.nav-column p a {
-  color: #444;
-  text-decoration: none;
-}
-
-.nav-column p a:hover {
-  color: #FFCC00;
-}
-
+/* === 🧭 Bottom Bar === */
 .footer-bottom {
   background-color: #274c77;
   color: white;
   text-align: center;
-  padding: 0.2rem;
+  padding: 0.8rem 1rem;
   margin-top: 3rem;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
 }
-
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
 .scroll-to-top {
   position: absolute;
   right: 1rem;
-  top: 1.2rem;
-  font-size: 1rem;
+  top: 1rem;
+  font-size: 1.2rem;
   color: white;
   text-decoration: none;
 }
-
 .scroll-to-top:hover {
   color: #FFCC00;
 }
 
+/* === 📱 Responsive Tweak === */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-brand, .footer-links {
+    flex: 1 1 100%;
+  }
+
+  .nav-column ul li a {
+    font-size: 1rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+    padding-bottom: 3rem;
+  }
+
+  .scroll-to-top {
+    right: 50%;
+    transform: translateX(50%);
+    top: auto;
+    bottom: 1rem;
+  }
+}
 /* === DEMO BUTTON (like GitHub button) === */
 .demo-btn {
   padding: 0.5rem 1rem;
