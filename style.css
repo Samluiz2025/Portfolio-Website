@@ -922,21 +922,6 @@ img {
   }
 }
 
-
-/* Hide hamburger by default */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #274c77;
-  z-index: 1000;
-}
-
-/* Hide menu by default */
-.menu {
-  display: none;
-}
-
 /* Show hamburger and menu only on small screens */
 @media (max-width: 768px) {
   .top-nav {
