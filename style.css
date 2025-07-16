@@ -924,7 +924,7 @@ img {
 
 /* 🌐 Default styles (desktop) — hide hamburger & mobile menu */
 .hamburger {
-  display: none;
+  display: none !important;
 }
 
 /* 📱 Mobile styles (under 768px) */
@@ -981,17 +981,7 @@ img {
     color: #FFCC00;
   }
 
-  @keyframes dropdown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
+  
 @keyframes dropdown {
     from {
       opacity: 0;
