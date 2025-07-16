@@ -922,19 +922,50 @@ img {
   }
 }
 
-  /* ========================  Hamburger Menu Styles
-  
 
+/* Hide hamburger by default */
 .hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
   color: #274c77;
-  z-index: 11;
-  position: relative;
+  z-index: 1000;
 }
 
+/* Hide menu by default */
+.menu {
+  display: none;
+}
 
+/* Show hamburger and menu only on small screens */
+@media (max-width: 768px) {
+  .top-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    background-color: #fff;
+    border: 2px solid #274c77;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+  }
+  
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -961,15 +992,27 @@ img {
 
   .menu.open {
     display: flex;
+    animation: dropdown 0.3s ease-in-out;
   }
 
   .menu li {
     margin-bottom: 0.8rem;
+    list-style: none;
   }
-
   .top-nav {
     flex-direction: column;
     align-items: flex-end;
+  }
+}
+@keyframes dropdown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 @media (max-width: 768px) {
