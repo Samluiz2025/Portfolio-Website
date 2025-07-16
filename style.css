@@ -34,7 +34,7 @@ section {
 
 .menu {
   list-style: none;
-  display: flex;
+  display: flex; 
   gap: 2rem;
   justify-content: center;
   align-items: center;
@@ -912,12 +912,15 @@ img {
 
 /* 🔒 Hide hamburger on desktop by default */
 .hamburger {
-  display: none;
+  display: none; /* Hide hamburger on wide screens */
   background: none;
   border: none;
   font-size: 2rem;
   color: #274c77;
   cursor: pointer;
+  margin: 0 auto;
+  z-index: 999;
+  outline: none;
 }
 
 /* 📱 Mobile styles — active below 768px */
@@ -939,7 +942,7 @@ img {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
-}
+
   .hamburger {
     display: block;
     font-size: 2rem;
