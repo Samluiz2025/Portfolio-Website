@@ -927,7 +927,12 @@ img {
   display: none !important;
 }
 
-/* 📱 Mobile styles (under 768px) */
+/* 🌐 Desktop styles — hide hamburger */
+.hamburger {
+  display: none;
+}
+
+/* 📱 Mobile styles — active below 768px */
 @media (max-width: 768px) {
   .top-nav {
     display: flex;
@@ -935,15 +940,21 @@ img {
     align-items: center;
     padding: 1rem;
     position: relative;
+    border: none;
+    background-color: transparent;
   }
 
   .hamburger {
     display: block;
     font-size: 2rem;
-    cursor: pointer;
     color: #274c77;
+    cursor: pointer;
     margin: 0 auto;
     z-index: 999;
+    /* ✨ Clean look, no border or background */
+    background: none;
+    border: none;
+    outline: none;
   }
 
   .menu {
@@ -959,7 +970,8 @@ img {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 80%;
     z-index: 998;
-    font-size: 0.95rem; /* 🔡 Smaller font size for mobile */
+    font-size: 0.95rem;
+    border-radius: 12px;
   }
 
   .menu.open {
@@ -980,25 +992,21 @@ img {
   .menu li a:hover {
     color: #FFCC00;
   }
+}
 
-  
+/* 🎬 Dropdown animation */
 @keyframes dropdown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-@media (max-width: 768px) {
-  .top-nav {
-    border: none;
-    background-color: transparent;
-  }
 
+@media (max-width: 768px) {
   .project-row {
     flex-direction: column;
     gap: 2rem;
