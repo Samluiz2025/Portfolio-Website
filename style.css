@@ -1,3 +1,8 @@
+/* 🌐 Desktop: hide hamburger */
+.hamburger {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -836,10 +841,7 @@ input, textarea {
   color: white;
 }
 
-/* ================================
-   ✅ Responsive Mobile Fixes
-   ================================ */
-
+ /* ==============Responsive Mobile Fixes =============== */
 img {
   max-width: 100%;
   height: auto;
@@ -933,9 +935,11 @@ img {
     width: 90%;
     left: 5%;
     transform: none;
-    padding: 0.5rem 1rem;
     border: none;
     background-color: transparent;
+    padding: 0 !important;
+    margin: 0 !important;
+    top: 0 !important;
   }
 
   .banner-section {
