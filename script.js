@@ -99,13 +99,13 @@ window.addEventListener("DOMContentLoaded", () => {
   const chatText = document.getElementById("chatText");
 
   const funFacts = [
-    "Hi there! Did you know this site runs on midnight creativity? 🌙",
-    "This portfolio is powered by coffee and Ctrl+Z ☕⌨️",
-    "Udoba once styled an entire site without using 'px' — just vibes and rems 💅",
-    "Every section on this site has been hand-tuned like a guitar 🎸",
-    "JavaScript wrote this popup. Udoba taught it how to party 🎉",
-    "Tip: Hit 'Contact' and tell Udoba you made it this far 🚀",
-    "The CSS is smoother than jazz on a rainy night 🎷"
+    "Hi there! Did you know this site runs on midnight creativity? ",
+    "This portfolio is powered by coffee and Ctrl+Z ",
+    "Udoba once styled an entire site without using 'px' — just vibes and rems ",
+    "Every section on this site has been hand-tuned like a guitar ",
+    "JavaScript wrote this popup. Udoba taught it how to party ",
+    "Tip: Hit 'Contact' and tell Udoba you made it this far ",
+    "The CSS is smoother than jazz on a rainy night "
   ];
 
   let lastIndex = -1;
@@ -192,7 +192,7 @@ function revealOnScroll() {
   // Auto Chat Popup Suggestion
   const chatPopup = document.getElementById("chatPopup");
   if (window.scrollY < window.innerHeight * 0.5 && chatPopup?.style.display === "none") {
-    const hint = "Tip: Scroll down to explore Projects or meet Udoba 🎯";
+    const hint = "Tip: Scroll down to explore Projects or meet Udoba ";
     const chatText = document.getElementById("chatText");
     chatText.textContent = "";
     let i = 0;
@@ -219,3 +219,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
