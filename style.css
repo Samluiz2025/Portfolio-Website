@@ -72,7 +72,7 @@ section {
 .banner-section {
   position: relative;
   height: 100vh;
-  background: url('Banner11.jpg') center/cover no-repeat; /* ✅ Pure image background */
+  background: url('Banner11.jpg') center/cover no-repeat; /* Pure image background */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -266,7 +266,6 @@ section {
   align-items: center;
   transition: transform 0.3s ease;
 
-  /* 💥 NEW: Pre-animation state */
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.6s ease-out;
@@ -277,7 +276,6 @@ section {
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* ✅ NEW: Reveal class added by JS */
 .project-card.reveal {
   opacity: 1;
   transform: translateY(0);
@@ -609,7 +607,6 @@ input, textarea {
 }
 
 
-/* 💬 Chat Bubble Button */
 .chat-bubble {
   position: fixed;
   bottom: 2rem;
@@ -667,7 +664,7 @@ input, textarea {
 }
 
 
-/* === 📦 Footer Container === */
+/* ===  Footer Container === */
 .footer {
   background: linear-gradient(to right, #fdfdfd, #f5f7fa);
   color: #333;
@@ -694,7 +691,7 @@ input, textarea {
   margin: 0 auto;
 }
 
-/* === 👤 Brand Column === */
+/* ===  Brand Column === */
 .footer-brand {
   flex: 1 1 300px;
 }
@@ -712,7 +709,7 @@ input, textarea {
   color: #555;
 }
 
-/* === 🌐 Social Icons === */
+/* === Social Icons === */
 .footer-social {
   display: flex;
   gap: 1rem;
@@ -734,7 +731,7 @@ input, textarea {
 .footer-social a.tiktok { color: #69C9D0; }
 .footer-social a.github { color: #181717; }
 
-/* === 📚 Navigation Links Column === */
+/* === Navigation Links Column === */
 .footer-links {
   flex: 1 1 300px;
   display: flex;
@@ -762,7 +759,7 @@ input, textarea {
   color: #FFCC00;
 }
 
-/* === 🧭 Bottom Bar === */
+/* === Bottom Bar === */
 .footer-bottom {
   background-color: #274c77;
   color: white;
@@ -788,7 +785,6 @@ input, textarea {
   color: #FFCC00;
 }
 
-/* === 📱 Responsive Tweak === */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -820,7 +816,7 @@ input, textarea {
     bottom: 1rem;
   }
 }
-/* === DEMO BUTTON (like GitHub button) === */
+/* === DEMO BUTTON === */
 .demo-btn {
   padding: 0.5rem 1rem;
   font-size: 0.85rem;
@@ -911,7 +907,7 @@ img {
   }
 }
 
-/* 🔒 Hide hamburger on desktop by default */
+
 .hamburger {
   display: none; /* Hide hamburger on wide screens */
   background: none;
@@ -924,7 +920,6 @@ img {
   outline: none;
 }
 
-/* 📱 Mobile styles — active below 768px */
 @media (max-width: 768px) {
   .top-nav {
     display: flex;
@@ -968,7 +963,7 @@ img {
     display: block;
     width: 100%;
     height: 7px;
-    background-color: #274c77; /* 🎨 Your site's main blue */
+    background-color: #274c77; /*  Your site's main blue */
     margin: 4px 0;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -1016,7 +1011,7 @@ img {
   }
 }
 
-/* 🎬 Dropdown animation */
+/*  Dropdown animation */
 @keyframes dropdown {
   from {
     opacity: 0;
@@ -1051,3 +1046,4 @@ img {
     padding: 1rem;
   }
 }
+
